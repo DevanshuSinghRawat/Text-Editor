@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="sidebar.css">
+        <link rel="stylesheet" href="home.css">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            E-Nursery
+        </header>
+
+        <input type="checkbox" id="toogle">
+            <label for="toogle" class="sidebarIcon">
+            <div class="spinner top"></div>
+            <div class="spinner middle"></div>
+            <div class="spinner bottom"></div>
+            </label>
+        
+        <div id="sidebar">
+        <ul class=sidemenu>
+            <li><a>Home</a></li>
+            <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-element" id="p401" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p402" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p403" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p404" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p405" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p406" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p407" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p408" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p409" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p410" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p411" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p412" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p413" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p414" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p415" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p416" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p417" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p418" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p419" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p420" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p421" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p422" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p423" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p424" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p425" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p426" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p427" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p428" onclick="showDetails(this)"><span class="plantname"> </span></div>
+            <div class="grid-element" id="p429" onclick="showDetails(this)"><span class="plantname"> </span></div>
+        </div>
+        
+        <div class="ViewCont">
+            <div id="image_holder"> </div>
+            <div id="image_describe"> </div>
+        </div>
+    </body>
+    <script>
+        let len = document.getElementsByClassName("grid-element").length;
+        let info ={
+            p401: {name: "Marigold", cost: 200, season: "All"},
+            p402: {name: "Rose", cost: 250, season: "All"},
+            p403: {name: "Lily", cost: 200, season: "All"},
+            p404: {name: "Tulip", cost: 200, season: "All"},
+            p405: {name: "Lotus", cost: 200, season: "All"},
+            p406: {name: "Pancy", cost: 200, season: "All"},
+            p407: {name: "Tulsi", cost: 200, season: "All"},
+            p408: {name: "Giloy", cost: 200, season: "All"},
+            p409: {name: "Turmeric", cost: 200, season: "All"},
+            p410: {name: "Ginger", cost: 200, season: "All"},
+            p411: {name: "Bamboo", cost: 200, season: "All"},
+            p412: {name: "Orange", cost: 200, season: "All"},
+            p413: {name: "Sadabahar", cost: 200, season: "All"},
+            p414: {name: "Coriander", cost: 200, season: "All"},
+            p415: {name: "Fenu greek", cost: 200, season: "All"},
+            p416: {name: "China Pink", cost: 100, season: "All"},
+            p417: {name: "Gazania", cost: 150, season: "All"},
+            p418: {name: "Ficus", cost: 50, season: "All"},
+            p419: {name: "Marigold", cost: 200, season: "All"},
+            p420: {name: "Marigold", cost: 200, season: "All"},
+            p421: {name: "Marigold", cost: 200, season: "All"},
+            p422: {name: "Marigold", cost: 200, season: "All"},
+            p423: {name: "Marigold", cost: 200, season: "All"},
+            p424: {name: "Marigold", cost: 200, season: "All"},
+            p425: {name: "Marigold", cost: 200, season: "All"},
+            p426: {name: "Marigold", cost: 200, season: "All"},
+            p427: {name: "Marigold", cost: 200, season: "All"},
+            p428: {name: "Marigold", cost: 200, season: "All"},
+            p429: {name: "Marigold", cost: 200, season: "All"}
+        }
+        let pics=["p1_marigold.jpg","p2_rose.jpg","p3_lily.jpeg","p4_tulip.jpg","p5_lotus.jpg","p6_pancy.jpg",
+                  "p7_tulsi.jpg","p8_giloy.jpg","p9_turmeric.jpg","p10_ginger.jpg","p11_bamboo.jpg","p12_orange.jpg",
+                "p13_sadabahar.jfif","p14_coriander.jpg","p15_fenugreek.jpg","p16_chinapink.jpg","p17_gazania.jpg","p18_ficus.jpg"]
+        
+        let IDs=Array()
+        for(let i=0;i<len;i++){
+
+            IDs.push(document.getElementsByClassName("grid-element")[i].id);
+            let gridElm = document.querySelectorAll(".plantname")[i];
+
+            gridElm.innerHTML = info[IDs[i]].name;
+            let element = document.getElementsByClassName("grid-element")[i];
+            element.style.background ="url('Sources/" + pics[i] + "')";
+            element.style.backgroundSize="cover";
+            // element.style.backgroundRepeat="no-repeat";
+            // element.style.backgroundPosition="center";
+        }
+        
+        // name="Marigold"
+        // cost=200
+        // season="All"
+        // let IDs=Array()
+        // for(let i=0;i<len;i++){
+            //     IDs.push(document.getElementsByClassName("grid-element")[i].id);
+            //     console.log(typeof(document.getElementsByClassName("grid-element")[i].id));
+            // }
+            // str='<h5>'+ info[givenID][name] +'</h5>' + 'Rs '+ info[givenID][cost] + '<p>'+ info[givenID][season] +'</p>'
+            
+            // let cost, season;
+        // for(let i=0;i<len;i++){
+            // vgff
+        // }
+        function showDetails(elm){
+            let givenID = elm.id;
+            str='<h3>'+ info[givenID].name +'</h3>' + 'Rs '+ info[givenID].cost + '<p>'+'Season: '+ info[givenID].season +'</p>'
+            document.getElementById("image_describe").innerHTML=str;
+            
+            let css_BG = elm.style.background;
+            document.querySelector("#image_holder").style.background=css_BG;
+            
+        }
+
+    </script>
+</html>

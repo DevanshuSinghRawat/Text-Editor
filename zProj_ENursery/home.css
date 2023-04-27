@@ -1,0 +1,70 @@
+body{
+    width: 1200px;
+    margin-left: 10%;
+    scroll-behavior: smooth;
+}
+header{
+    height: 100px;
+    padding: 10px;
+    padding-left: 150px;
+    background: black;
+    color: white;
+    font-size: 20px;
+}
+.grid-container{
+    float: left;
+    display: inline-grid;
+    position: relative;
+    grid-template-columns: auto auto auto;
+}
+.grid-element{
+    width: 200px;
+    height: 150px;
+    border: 1px solid black;
+    background: rgb(7, 117, 25);
+    background-size: contain;
+    margin: 10px;
+    padding: 40px;
+}
+.plantname{
+    position: relative;
+    top: 100px;
+    left: 40%;
+    background-color: white;
+    border-radius: 8px;
+
+}
+.ViewCont{
+    float: left;
+    border: 2px solid black;
+    position: static;
+}
+#image_holder{
+    height: 400px;
+    width: 400px;
+    border: 2px solid red;
+    background: no-repeat;
+    background-size: contain;
+    position: inherit;
+}
+#image_describe{
+    float: inline-end;
+    height: 400px;
+    width: 400px;
+    border: 5px solid cyan;
+    font-family:  Geneva, Tahoma, sans-serif;
+    padding-left: 20%;
+    position: inherit;
+}
+.zoom{
+    display: none;
+    width: 90%;
+    height: 90%;
+    padding: 10%;
+    border: 2px solid red;
+    /* background-image: url(Sources/gehu.jpg); */
+    background-size: cover;
+}
+.image_holder:hover + .zoom{
+    display: block;
+}
